@@ -1,0 +1,79 @@
+// Place all the styles related to the Store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.store {
+  h1 {
+  margin: 0;
+  padding-bottom: 0.5em;
+  color: #000;
+  padding-left: 8px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  padding-top: 15px;
+  line-height: 20px;
+  border-bottom-width: 1px;
+  border-bottom-style: inset;
+  border-bottom-color: #CCC;
+  }
+
+  /* An entry in the store catalog */
+  .entry {
+          overflow: auto;
+          margin-top: 1em;
+          min-height: 100px;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          border-bottom-color: #CCC;
+
+    img {
+      align: top;
+      width: 50px;
+      margin-right: 1px;
+      margin-bottom: 1px;
+      position: absolute;
+    }
+
+    h3 {
+      font-size: 120%;
+      font-family: sans-serif;
+      /*margin-left: 100px;*/
+      margin-top: 0;
+      margin-bottom: 2px;
+      color: #227;
+    }
+
+    p, div.download_line {
+      /*margin-left: 100px;*/
+      margin-top: 0.5em; 
+      margin-bottom: 0.8em; 
+    }
+
+    td {
+    	boder: 1px;
+    }
+
+    .download_link {
+      color: #44a;
+      font-weight: bold;
+      margin-right: 1em;
+      text-align: center;
+    }
+
+    .c1 {
+      boder: 1px;
+      width: 0%;
+    }
+
+    .c2 {
+      width: 80%;
+    }
+    
+    .c3 {
+      width: 20%;
+    }
+
+
+  }
+}

@@ -1,0 +1,53 @@
+<!-- START:head -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- START_HIGHLIGHT -->
+  <title>Bookshelf - online library</title>
+<!-- END_HIGHLIGHT -->
+  <!-- <label id="code.slt"/> --><%= stylesheet_link_tag    "application", media: "all",
+    "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %><!-- <label id="code.jlt"/> -->
+  <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
+</head>
+<!-- END:head -->
+<body class="<%= controller.controller_name %>">
+<!-- START_HIGHLIGHT -->
+  <div id="wrapper">
+  <div id="banner">
+    <%= image_tag("logo_small.png") %>
+    <%= link_to @page_title || "Bookshelf", controller: 'store', action: 'index' %><!-- <label id="code.depot.e.title"/> -->
+  </div>
+
+  <div id="search">
+  <%= form_tag("searchresults", method: "get") do %>
+    <%= label_tag(:q, "") %>
+    <%= text_field_tag(:q, nil, :placeholder => 'Найти книгу') %>
+     <%= submit_tag('', id: "button") %>
+  <% end %>
+  </div>
+
+<hr>
+
+  <div id="columns">
+    <div id="side">
+      <ul>
+        <li><%= link_to 'Search page', controller: 'store', action: 'search' %></li>
+        <li><%= link_to 'Catalog page', controller: 'store', action: 'index' %></li>
+        <p></p>
+        <li><a href="http://www....">Советская эпоха</a></li>
+        <li><a href="http://www..../faq">Серебрянный век</a></li>
+        <li><a href="http://www..../news">Золотой век</a></li>
+        <li><a href="http://www..../contact">18 век</a></li>
+      </ul>
+    </div>
+    <div id="main">
+<!-- END_HIGHLIGHT -->
+      <%= yield %><!-- <label id="code.depot.e.include"/> -->
+<!-- START_HIGHLIGHT -->
+    </div>
+  </div>
+</div>
+<!-- END_HIGHLIGHT -->
+</body>
+</html>

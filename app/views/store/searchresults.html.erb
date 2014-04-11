@@ -1,0 +1,29 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<p>Результаты поиска по запросу: '<%= params[:q] %>' </p>
+
+<h1>Результаты</h1>
+
+
+
+<% @search_books.each do |book| %>
+<div class="entry">
+<table>
+	<tr>
+		<td class="c1">
+			<%#= image_tag("logo_small.png") %>
+		</td>
+		<td class="c2"> 
+			<h3><%= book.title %></h3>
+			<p><%= book.author %></p>
+		</td>
+		<td class="c3"> 
+			<p class="download_link">download link</p>		
+		</td>
+	
+</tr>
+</table>
+</div>
+<% end %>
