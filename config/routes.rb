@@ -1,6 +1,4 @@
 Bs001::Application.routes.draw do
-  resources :comments
-
   get "store/index"
   resources :books
 
